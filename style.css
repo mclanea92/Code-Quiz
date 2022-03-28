@@ -59,8 +59,8 @@ header {
     font: bolder;
     padding: 1px 5px;
     cursor: pointer;
-    width: 80%;
-    height: 50%;
+    width: 30%;
+    height: 50px;
     display: flexbox;
     padding: none;
     margin: 8px;
