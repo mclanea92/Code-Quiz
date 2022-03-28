@@ -6,7 +6,9 @@ var highScoreSubmit = document.querySelector(".highscore-html");
 var beginButton = document.querySelector(".beginButton");
 
 
-// questions
+// I put the questions into a var objects below to pull the answers
+// and the correct one
+
 var questions = [
     {
         question:"what is my name?", 
