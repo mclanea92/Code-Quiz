@@ -38,6 +38,8 @@ header {
     border: 0px;
     padding: 15px 30px;
     font-size: 20px;
+    margin-top: 10%;
+    display: flexbox;
 }
 
 .button-control button:hover {
@@ -51,6 +53,20 @@ header {
 
 .question {
     font-size: 35px;
+}
+
+#beginButton {
+    background-color: rgb(218, 218, 175);
+    border: 2px solid black;
+    font-size: 20px;
+    font: bolder;
+    padding: 1px 5px;
+    cursor: pointer;
+    width: 80%;
+    height: 50%;
+    display: flexbox;
+    padding: none;
+    margin: 8px;
 }
 
 .choiceanswers,
