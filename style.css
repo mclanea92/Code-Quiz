@@ -17,6 +17,7 @@ header {
 
 .howto {
     font-size: 40px;
+    text-align: center;
 }
 
 .howto p {
@@ -65,7 +66,7 @@ header {
 
 .choiceanswer {
     background-color: rgb(218, 218, 175);
-    border: 2px solid black;
+    border: 10px solid black;
     font-size: 25px;
     padding: 10px 24px;
     cursor: pointer;
@@ -73,6 +74,36 @@ header {
     display: block;
     margin: 8px;
 }
+
+.choiceanswer:hover {
+    background-color: rgb(177, 177, 140)
+}
+
+.results {
+    margin: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.endgame {
+    display: none;
+}
+.resultsdesign p 
+.highscore-html {
+    text-align: center;
+    font-size: 50px;
+}
+
+.highscore-html input{
+    font-size: 25px;
+    line-height: 10px;
+    width: 100px;
+}
+
+.submit:hover {
+    background-color: rgb(236, 236, 187);
+}
+
 
 
 

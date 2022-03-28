@@ -10,6 +10,7 @@
 </head>
 <body>
     <header>
+        <!-- find out if i can put all into one html -->
         <div class="highscore"> <a href="highscore.html">View High Scores</a></div>
         <div class="timer"> <span id="time">Time: 60 second(s)</span></div>
     </header>
@@ -17,8 +18,8 @@
     <section class="howto">
         <div class="howto-box">
         <h1 class="howto">Coding Quiz using Web APIs</h1>
-        <p class="howto">Answer the following questions within 1 Minute!</p>
-        <p class="howto">You will be penalized 10 seconds for any incorrect answer.
+        <p class="howto">Answer the following questions within 1 Minute!
+            <br>You will be penalized 10 seconds for any incorrect answer.
             <br>Your final score will be what time is remaining.
         </p>
         </div>
@@ -32,7 +33,7 @@
             <div class="q-block">
                 <p class="question"> </p>
                 <br>
-                
+
                 <div class="choiceanswers">
                     <button class="choiceanswer" id="a1"></button>
                     <button class="choiceanswer" id="a2"></button>
@@ -40,8 +41,10 @@
                     <button class="choiceanswer" id="a4"></button>
                 </div>
                     <div class="endgame">
-                    <div><p class="scorefinal"></p></div>
-                </div>
+                    <div>
+                        <p class="scorefinal"></p>
+                    </div>
+                
                 <div>
                     <form action="highscore.html" class="highscore-html">
                         Enter your initals to submit your highscore! <input type="text" name="initals" id="initals">
@@ -53,7 +56,7 @@
             </div>
             <div class="resultsdesign">
                 <p class="results"></p>
-            </div>
+            
 
         </section>
 
