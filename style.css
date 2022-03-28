@@ -48,8 +48,31 @@ header {
     background-color: rgb(238, 201, 186);
 } */
 
+.question {
+    font-size: 35px;
+}
 
+.choiceanswers,
+.choiceanswer {
+    display: none;
+    margin: auto;
+    width: 50%;
+}
 
+.choiceanswers {
+    border: 1px solid;
+}
+
+.choiceanswer {
+    background-color: rgb(218, 218, 175);
+    border: 2px solid black;
+    font-size: 25px;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 80%;
+    display: block;
+    margin: 8px;
+}
 
 
 
