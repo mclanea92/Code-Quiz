@@ -1,5 +1,7 @@
 body {
     background-color: lightgray;
+    border: 5px solid black;
+    padding: 5px;
 }
 
 header {
@@ -45,11 +47,6 @@ header {
 .button-control button:hover {
     opacity: 70%;
 }
-
-/* .button-control button:active:after {
-    opacity: 50%;
-    background-color: rgb(238, 201, 186);
-} */
 
 .question {
     font-size: 35px;

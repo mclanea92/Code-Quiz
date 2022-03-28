@@ -12,7 +12,7 @@
     <header>
         <!-- find out if i can put all into one html -->
         <div class="highscore"> <a href="highscore.html">View High Scores</a></div>
-        <div class="timer"> <span id="time">Time: 60 second(s)</span></div>
+        <div class="timer"> Time: <span id="time">60</span></div>
     </header>
 
     <section class="howto">
@@ -24,7 +24,7 @@
         </p>
         </div>
         <div class="button-control">
-            <button type="button" id="beginButton">Let's begin!</button>
+            <button type="button" id="beginButton">Click here to begin!</button>
         </div>
     </section>
 
@@ -45,23 +45,25 @@
                         <p class="scorefinal"></p>
                     </div>
                 
-                <div>
-                    <form action="highscore.html" class="highscore-html">
+                <div class="highscore-html">
                         Enter your initals to submit your highscore! <input type="text" name="initals" id="initals">
                     <p>
+                        
+                        <!-- check this  -->
                         <input type="submit" class="submit" onclick="restartGame()">
                     </p>
                     </form>
                 </div>
             </div>
         </section>
-        <section class="highscores"    
-        <div class="resultsdesign">
+        <section class="highscores">
+    
+        <div class="finalHighscore">
                 <p class="results"></p>
             
 
         </div>
-
+    </section>  
     </main>
 
     <script src="./script.js"></script>
