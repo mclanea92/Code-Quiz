@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" src="./style.css"/>
     <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <div class="highscore"> <a href="highscore.html">View High Scores</a></div>
-        <div class="timer"> <span id="time">60</span></div>
+        <div class="timer"> <span id="time">Time: 60 second(s)</span></div>
     </header>
 
     <section class="howto">
@@ -27,16 +28,27 @@
     <main>
         <section class="questions">
             <div class="q-block">
-                <p class="question">
+                <p class="question"> </p>
                 <div class="choiceanswers">
                     <button class="choiceanswer" id="a1"></button>
                     <button class="choiceanswer" id="a2"></button>
                     <button class="choiceanswer" id="a3"></button>
                     <button class="choiceanswer" id="a4"></button>
                 </div>
-                <div class="endgame"
-                </p>
-
+                    <div class="endgame">
+                    <div><p class="scorefinal"></p></div>
+                </div>
+                <div>
+                    <form action="highscore.html" class="highscore-html">
+                        Enter your initals to submit your highscore! <input type="text" name="initals" id="initals">
+                    <p>
+                        <input type="submit" class="submit" onclick="restartGame()">
+                    </p>
+                    </form>
+                </div>
+            </div>
+            <div class="resultsdesign">
+                <p class="results"></p>
             </div>
 
         </section>
