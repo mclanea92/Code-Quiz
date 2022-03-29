@@ -11,6 +11,7 @@ var question = document.querySelector('.choiceanswers')
 // I put the questions into a var objects below to pull the answers
 // and the correct one
 
+var ranQuest = questions;
 var questions = [
     {
         question:"what is my name?", 
@@ -62,5 +63,10 @@ function StartTimer() {
         timeCount-- ;
         time.textContent = time;
     }
+
+function multiQuest() {
+    ranQuest = questions[Math.floor(Math.random() * questions.length)];
+
+}
 
 
