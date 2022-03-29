@@ -1,13 +1,13 @@
-var time = document.querySelector('.timer')
+var time = document.querySelector('#time')
 var highScoresFinal = document.querySelector(".highscoresFinal");
 var submitScore = document.querySelector(".submit");
 var highScorePage = document.querySelector(".highScoresFinal");
 var highScoreSubmit = document.querySelector(".highscore-html");
 var beginButton = document.querySelector("#beginButton");
 var choicesBox = document.querySelector('.choiceanswers');
-var instructions = document.querySelector('.instructions')
-
-
+var instructions = document.querySelector('.howto');
+var quest = document.querySelector('.question');
+var question = document.querySelector('.choiceanswers')
 // I put the questions into a var objects below to pull the answers
 // and the correct one
 
@@ -44,19 +44,14 @@ beginButton.addEventListener('click', function() {
     }, 1000)
 
     instructions.style.display = 'none';
-    questions.style.display = 'block';
+    question.style.display = 'block';
+    beginButton.style.display = 'none';
+
+    quizQuestion(timerStart)
 })
 
-function displayTimer(){
-  // adds a leading 0 when seconds remainder is less than 10
-  var sec = seconds % 60 < 10 ? "0" + seconds % 60 : seconds % 60;
-  // minutes calculation
-  var min = Math.floor(seconds / 60);
-
-  // put time on page
-  timer.textContent = `${min}:${sec}`;
-};
-
-function startGame () {
+function time(beginButton) {
+    
 
 }
+

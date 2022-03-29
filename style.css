@@ -17,10 +17,16 @@ header {
     justify-content: center;
 }
 
+.question {
+    display: none;
+}
+
 .howto {
     font-size: 40px;
     text-align: center;
 }
+
+
 
 .howto p {
     font-size: 20px;
