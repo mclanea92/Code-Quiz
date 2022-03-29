@@ -52,6 +52,10 @@ header {
     font-size: 35px;
 }
 
+.instructions {
+    display: block;
+}
+
 #beginButton {
     background-color: rgb(218, 218, 175);
     border: 2px solid black;
