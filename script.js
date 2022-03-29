@@ -33,13 +33,13 @@ if(questions[0].choices[0]===questions[0].answer){
     correctAnswers++;
 }
 else{
-    time--;
+    timer--;
 }
 
 beginButton.addEventListener('click', function() {
     var timer =setInterval(function () {
-        currentTime--;
-        timer.textContent = currentTime;
+        timer--;
+        timer = currentTime;    
         checkTime(timerStart);
     }, 1000)
 
@@ -47,11 +47,20 @@ beginButton.addEventListener('click', function() {
     question.style.display = 'block';
     beginButton.style.display = 'none';
 
-    quizQuestion(timerStart)
+    return startGame
 })
 
-function time(beginButton) {
+function startGame() {
+    time = 60;
     
-
+    multiQuest ()
+    startTimer ()
 }
+
+function StartTimer() {
+    time = setInterval(funtion(timer)) 
+        timeCount-- ;
+        time.textContent = time;
+    }
+
 
