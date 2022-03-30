@@ -64,9 +64,5 @@ function StartTimer() {
         time.textContent = time;
     }
 
-function multiQuest() {
-    ranQuest = questions[Math.floor(Math.random() * questions.length)];
-
-}
 
 
