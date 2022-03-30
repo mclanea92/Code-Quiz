@@ -1,8 +1,9 @@
 var time = document.querySelector('#time')
 var instructions = document.querySelector('.howto');
-var timerInterval = 60;
+var timerInterval = '60';
 var start = document.querySelector('#beginButton')
-
+var questionHide = document.querySelector('.questions')
+var currentQuestNum = 0;
 
 var questions = [{
     ask: "Inside which HTML element do we put the JavaScript?",
@@ -75,17 +76,18 @@ console.log(correct);
 console.log(wrong); 
 
 beginButton.addEventListener('click', function() {
-        var timer =setInterval(function () {
-            --timer;
-            // timer = currentTime;   
-            // checkTime(timerStart);
-        }, 1000)
+    console.log('button 1')    
+    // var timer =setInterval(function () {
+    //         --timer;
+    //         // timer = currentTime;   
+    //         // checkTime(timerStart);
+    //     }, 1000)
     
         instructions.style.display = 'none';
-        question.style.display = 'block';
+        questionHide.style.display = 'block';
         beginButton.style.display = 'none';
     
-        return startGame
+        return startGame();
     })
 //timer code
 function startGame(){
@@ -101,6 +103,8 @@ function startGame(){
         clearInterval(timerInterval);
       }
     }, 1000);
+    
+    displayQuestions();
   }
   function displayTimer(){
     // adds a leading 0 when seconds remainder is less than 10
@@ -111,13 +115,37 @@ function startGame(){
     // put time on page
     time.textContent = `${min}:${sec}`;
   };
-  start.addEventListener("click", function(beginButton){
-    // // if you have a form on a page
-    // event.preventDefault();
-  
-    startGame()
-    console.log("start");
-  });
+
+  function displayQuestions() {
+      
+    
+        var answer1=document.querySelector('#a1');
+      var answer2=document.querySelector('#a2');
+      var answer3=document.querySelector('#a3');
+      var answer4=document.querySelector('#a4');
+      var question=document.querySelector('.question');
+
+      question.textContent=questions[currentQuestNum].ask
+  }
+
+
+
+
+
+  //   start.addEventListener("click", function(beginButton){
+//     console.log('button 2') 
+//     var timer =setInterval(function () {
+//         --timer;
+//         // timer = currentTime;   
+//         // checkTime(timerStart);
+//     }, 1000)
+
+//     instructions.style.display = 'none';
+//     questionHide.style.display = 'block';
+//     // beginButton.style.display = 'none';
+
+//     startGame();
+//   });
 
 
 
