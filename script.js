@@ -132,6 +132,8 @@ function startGame(){
       
 
       question.textContent=questions[currentQuestNum].ask
+
+      return
   }
 
 
