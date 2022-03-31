@@ -16,8 +16,15 @@ header {
     justify-content: center;
 }
 
+.questions,
 .question {
     display: none;
+}
+
+section.questions-show,
+.questions-show .question,
+.questions-show .choiceanswers {
+    display: block;
 }
 
 /* .questions {

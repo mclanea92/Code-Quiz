@@ -84,7 +84,7 @@ beginButton.addEventListener('click', function() {
     //     }, 1000)
     
         instructions.style.display = 'none';
-        questionHide.style.display = 'block';
+        questionHide.classList.add('questions-show');
         beginButton.style.display = 'none';
     
         return startGame();
@@ -118,12 +118,18 @@ function startGame(){
 
   function displayQuestions() {
       
-    
-    var answer1=document.querySelector('#a1');
-      var answer2=document.querySelector('#a2');
-      var answer3=document.querySelector('#a3');
-      var answer4=document.querySelector('#a4');
+    var answerTags = document.querySelectorAll('#a1, #a2, #a3, #a4')
       var question=document.querySelector('.question');
+
+      for(var i =0 ; i < 4; i++) {
+          answerTags[i].textContent=questions[currentQuestNum].answers[i]
+      if (i === questions[currentQuestNum].correctAnswer) {
+          answerTags[i].setAttribute('data-Correct', true)
+      } else {
+        answerTags[i].setAttribute('data-Correct', false)
+      }
+        }
+      
 
       question.textContent=questions[currentQuestNum].ask
   }
