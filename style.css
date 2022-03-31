@@ -81,7 +81,8 @@ section.questions-show,
     margin: 8px;
 }
 
-.highscoresFinal {
+.highscoresFinal,
+.highscore-html {
     display: none;
 }
 
@@ -135,11 +136,6 @@ main.section {
     line-height: 10px;
     width: 100px;
 }
-
-.submit:hover {
-    background-color: rgb(236, 236, 187);
-}
-
 
 
 
