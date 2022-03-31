@@ -123,7 +123,8 @@ function startGame(){
 
       for(var i =0 ; i < 4; i++) {
           answerTags[i].textContent=questions[currentQuestNum].answers[i]
-      if (i === questions[currentQuestNum].correctAnswer) {
+      
+          if (i === questions[currentQuestNum].correctAnswer) {
           answerTags[i].setAttribute('data-Correct', true)
       } else {
         answerTags[i].setAttribute('data-Correct', false)
