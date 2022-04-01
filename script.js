@@ -4,6 +4,7 @@ var timerInterval = '60';
 var start = document.querySelector('#beginButton')
 var questionHide = document.querySelector('.questions')
 var currentQuestNum = 0;
+
 var questions = [{
     ask: "Inside which HTML element do we put the JavaScript?",
     answers: ["<script>", "<javascript>", "<js>", "<scripting>"],
@@ -89,7 +90,7 @@ beginButton.addEventListener('click', function () {
 function startGame() {
     // important to clear out previous interval before starting a new one
     clearInterval(timerInterval);
-    seconds = 60;
+    seconds = 5; //FIXXXXXXXX
     timerInterval = setInterval(function () {
         console.log(--seconds);
         displayTimer();
@@ -104,11 +105,10 @@ function startGame() {
 }
 function displayTimer() {
     // adds a leading 0 when seconds remainder is less than 10
-    var sec = seconds % 60 < 10 ? "0" + seconds % 60 : seconds % 60;
     // minutes calculation
-    var min = Math.floor(seconds / 60);
+    var min = Math.floor(seconds / 60); 
     // put time on page
-    time.textContent = `${min}:${sec}`;
+    time.textContent = seconds;
 };
 function displayQuestions() {
     var answerTags = document.querySelectorAll('#a1, #a2, #a3, #a4')
@@ -144,3 +144,17 @@ function displayQuestions() {
         endSection.style.display = 'block';
      }
  }
+
+ function submitHighscore() {
+    var textInput = document.querySelector('#initals');
+
+    var highscoreEntry = [{
+        intials: textInput.value,
+        score: seconds,
+    }];
+    localStorage.setItem('highScores', JSON.stringify(highscoreEntry)
+    
+    )
+
+ }
+
