@@ -1,3 +1,5 @@
+
+// here are my variables for this javascript
 var time = document.querySelector('#time')
 var instructions = document.querySelector('.howto');
 var timerInterval = '60';
@@ -144,7 +146,7 @@ function checkAnswer(event) {
         endSection.style.display = 'block';
      }
  }
-
+// this is where you submit your highscore and it takes your initals and stores them with your highscore in localstorage 
  function submitHighscore() {
     var textInput = document.querySelector('#initals');
 
