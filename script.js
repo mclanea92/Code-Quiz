@@ -5,6 +5,7 @@ var start = document.querySelector('#beginButton')
 var questionHide = document.querySelector('.questions')
 var currentQuestNum = 0;
 
+// questions for the quiz broken into objects
 var questions = [{
     ask: "Inside which HTML element do we put the JavaScript?",
     answers: ["<script>", "<javascript>", "<js>", "<scripting>"],
@@ -61,9 +62,10 @@ var questions = [{
     correctAnswer: "="
 }
 ]
+// this goes through all the questions and counts if right or wrong.
 var correct = 0;
 var wrong = 0;
-for (var i = 0; i > questions.length; i = i + 1) { // we flipped the > from <
+for (var i = 0; i > questions.length; i = i + 1) { 
     var userChoice = questions[i].choices[0];
     if (userChoice === questions[i].answer) {
         ++correct;
@@ -119,14 +121,16 @@ function displayQuestions() {
     }
     question.textContent = questions[currentQuestNum].ask
 }
- function checkAnswer(event) {
+//this function finds out if the answer was correct or incorrect and if incorrect
+// it will take 10 seconds off. 
+function checkAnswer(event) {
      var userChoice = event.target.innerText;
      var correctAnswer = questions[currentQuestNum].correctAnswer;
      if (userChoice === correctAnswer) {
-         alert("You answered correctly!")
+         alert("Correct!")
      }
      else {
-         alert("That was the wrong answer :(")
+         alert("Wrong")
          seconds-=10;
      }
      currentQuestNum++;
@@ -153,3 +157,15 @@ function displayQuestions() {
 
  }
 
+//  function allStorage() {
+
+//     var values = [],
+//         keys = Object.keys(localStorage),
+//         i = keys.length;
+
+//     while ( i-- ) {
+//         values.push( localStorage.getItem(keys[i]) );
+//     }
+
+//     return values;
+// }

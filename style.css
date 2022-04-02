@@ -19,6 +19,7 @@ header {
 .questions,
 .question {
     display: none;
+    align-items: center;
 }
 
 section.questions-show,
