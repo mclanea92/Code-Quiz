@@ -76,11 +76,6 @@ console.log(correct);
 console.log(wrong);
 beginButton.addEventListener('click', function () {
     console.log('button 1')
-    // var timer =setInterval(function () {
-    //         --timer;
-    //         // timer = currentTime;
-    //         // checkTime(timerStart);
-    //     }, 1000)
     instructions.style.display = 'none';
     questionHide.classList.add('questions-show');
     beginButton.style.display = 'none';
@@ -90,7 +85,7 @@ beginButton.addEventListener('click', function () {
 function startGame() {
     // important to clear out previous interval before starting a new one
     clearInterval(timerInterval);
-    seconds = 5; //FIXXXXXXXX
+    seconds = 60; 
     timerInterval = setInterval(function () {
         console.log(--seconds);
         displayTimer();
@@ -157,11 +152,4 @@ function displayQuestions() {
     )
 
  }
-// function displayHighscore() {
-//     var lastScore = JSON.parse(localStorage.getItem('submitHighscore'));
-//     if (lastScore !== null) {
-//         document.getElementById('.score-list').innerHTML = highscoreEntry;
-//     } else {
-//         return;
-//     }
-// }
+
