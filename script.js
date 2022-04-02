@@ -4,8 +4,9 @@ var time = document.querySelector('#time')
 var instructions = document.querySelector('.howto');
 var timerInterval = '60';
 var start = document.querySelector('#beginButton')
-var questionHide = document.querySelector('.questions')
+var questionHide = document.querySelector('.questions');
 var currentQuestNum = 0;
+var HS = document.querySelector('.highscoresFinal');
 
 // questions for the quiz broken into objects
 var questions = [{
