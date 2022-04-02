@@ -157,4 +157,11 @@ function displayQuestions() {
     )
 
  }
-
+// function displayHighscore() {
+//     var lastScore = JSON.parse(localStorage.getItem('submitHighscore'));
+//     if (lastScore !== null) {
+//         document.getElementById('.score-list').innerHTML = highscoreEntry;
+//     } else {
+//         return;
+//     }
+// }
