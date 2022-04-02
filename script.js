@@ -159,18 +159,5 @@ function checkAnswer(event) {
 function displayHighscore(){
  var hScore = JSON.parse(localStorage.getItem('highScores'));
 
- displayHighscore
 
 }
-//  function allStorage() {
-
-//     var values = [],
-//         keys = Object.keys(localStorage),
-//         i = keys.length;
-
-//     while ( i-- ) {
-//         values.push( localStorage.getItem(keys[i]) );
-//     }
-
-//     return values;
-// }
