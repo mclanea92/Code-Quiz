@@ -126,13 +126,14 @@ function displayQuestions() {
 function checkAnswer(event) {
      var userChoice = event.target.innerText;
      var correctAnswer = questions[currentQuestNum].correctAnswer;
+     answerCheck.style.display = "block"
      if (userChoice === correctAnswer) {
-         alert("Correct!")
+         answerCheck.textContent = "Correct"
      }
      else {
-         alert("Wrong")
-         seconds-=10;
-     }
+         answerCheck.textContent = "Incorrect, the correct answer: " + questions[currentQuestNum].correctAnswer;
+         seconds-=10
+         }
      currentQuestNum++;
      if (currentQuestNum < questions.length) {
          displayQuestions();
