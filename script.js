@@ -160,6 +160,7 @@ function checkAnswer(event) {
     )
 
  }
+ //this is where the name and highscores would be pulled and displayed on the page.
 function displayHighscore(){
  var hScore = JSON.parse(localStorage.getItem('highScores'));
 
