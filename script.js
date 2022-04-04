@@ -149,13 +149,14 @@ function checkAnswer(event) {
  }
 // this is where you submit your highscore and it takes your initals and stores them with your highscore in localstorage 
  function submitHighscore() {
+     event.preventDefault();
     var hScore = localStorage.setItem('highScores', hScore);
     var textInput = document.querySelector('#initals');
     var highscoreArray = [];
     if (hScore === null) {
         highscoreArray = [];
     } else {
-        highscoreArray = localStorage.setItem('highScores', hScore)
+        highscoreArray = localStorage.getItem('highScores', hScore)
     }
     
     var highscoreEntry = [{
@@ -163,7 +164,7 @@ function checkAnswer(event) {
         score: seconds,
     }];
     console.log(highscoreEntry)
-    highscoreArray.push(highscoreEntry);
+    highscoreArray = highscoreEntry;
     window.localStorage.setItem('highScores', JSON.stringify(highscoreArray)
     
     )
