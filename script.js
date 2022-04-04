@@ -149,13 +149,22 @@ function checkAnswer(event) {
  }
 // this is where you submit your highscore and it takes your initals and stores them with your highscore in localstorage 
  function submitHighscore() {
+    var hScore = localStorage.setItem('highScores', hScore);
     var textInput = document.querySelector('#initals');
-
+    var highscoreArray = [];
+    if (hScore === null) {
+        highscoreArray = [];
+    } else {
+        highscoreArray = localStorage.setItem('highScores', hScore)
+    }
+    
     var highscoreEntry = [{
         intials: textInput.value,
         score: seconds,
     }];
-    localStorage.setItem('highScores', JSON.stringify(highscoreEntry)
+    console.log(highscoreEntry)
+    highscoreArray.push(highscoreEntry);
+    window.localStorage.setItem('highScores', JSON.stringify(highscoreArray)
     
     )
 
@@ -164,5 +173,7 @@ function checkAnswer(event) {
 function displayHighscore(){
  var hScore = JSON.parse(localStorage.getItem('highScores'));
 
-
 }
+
+
+
