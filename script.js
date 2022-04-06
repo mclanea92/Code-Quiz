@@ -163,12 +163,19 @@ function checkAnswer(event) {
     console.log(hScore)
     window.localStorage.setItem('highScores', JSON.stringify(hScore)
     )
-
+    displayHighscore();
  }
  //this is where the name and highscores would be pulled and displayed on the page.
 function displayHighscore(){
  var hScore = JSON.parse(localStorage.getItem('highScores'));
-
+console.log('hScore: ', hScore[0])
+    for (let i = 0; hScore.length > i; i++) {
+        let newLi = document.querySelector('.highscore-list').innerHTML;
+        newLi += `
+            <li><span>Name: </span> ${hScore[i].intials} <span>Score: </span> ${hScore[i].score}</li>
+        `;
+        document.querySelector('.highscore-list').innerHTML = newLi;
+    } 
 }
 
 
